@@ -1,7 +1,3 @@
-//
-// Created by tomka on 13.04.2021.
-//
-
 #include <cmath>
 #include <iostream>
 #include "series1.h"
