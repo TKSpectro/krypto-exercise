@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.19)
+project(krypto_exercise)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(krypto_exercise main.cpp src/series1.cpp src/series1.h)
