@@ -3,4 +3,4 @@ project(krypto_exercise)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(krypto_exercise main.cpp src/series1.cpp src/series1.h)
+add_executable(krypto_exercise main.cpp src/series1.cpp src/series1.h src/series2.cpp src/series2.h)
