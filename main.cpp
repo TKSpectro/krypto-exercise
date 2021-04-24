@@ -2,6 +2,8 @@
 
 #include "./src/series1.h"
 #include "./src/series2.h"
+#include "./src/series3.h"
+
 
 void series1(int a, int b) {
     std::cout << "--- Series 1 ---" << std::endl;
@@ -36,10 +38,24 @@ void series2() {
     std::cout << "--- Series 2 END ---" << std::endl;
 }
 
+void series3() {
+    std::cout << "--- Series 3 ---" << std::endl;
+
+    std::cout << "p: 7, q: 19, s: 2" << std::endl;
+    blumBlumShubGenerator(7, 19, 2, 100);
+    std::cout << "repeating number:\"010110\" " << std::endl;
+
+    std::cout << "p: 47, q: 67, s: 6" << std::endl;
+    blumBlumShubGenerator(47, 67, 6, 100);
+
+    std::cout << "--- Series 3 END ---" << std::endl;
+}
+
 
 int main() {
-    // series1(93, 42);
-    series2();
+    //series1(93, 42);
+    //series2();
+    series3();
 
     return 0;
 }
