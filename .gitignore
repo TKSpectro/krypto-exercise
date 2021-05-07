@@ -34,3 +34,4 @@
 # Custom
 /.idea
 /cmake-build-debug
+/pdf

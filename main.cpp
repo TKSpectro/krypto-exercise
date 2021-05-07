@@ -3,7 +3,7 @@
 #include "./src/series1.h"
 #include "./src/series2.h"
 #include "./src/series3.h"
-
+#include "./src/series4/des.h"
 
 void series1(int a, int b) {
     std::cout << "--- Series 1 ---" << std::endl;
@@ -51,11 +51,48 @@ void series3() {
     std::cout << "--- Series 3 END ---" << std::endl;
 }
 
+void series4() {
+    // Fill a vector with the numbers from 1..64
+    std::vector<int> input(64);
+    for (int i = 0; i < 64; i++) {
+        input[i] = i + 1;
+    }
+
+
+    std::pair<std::vector<int>, std::vector<int>> startPermVector = startPermutation(input);
+    // Extract the left and right vector into their own variables
+    std::vector<int> left = startPermVector.first;
+    std::vector<int> right = startPermVector.second;
+    // Output first the left vector and then the right one
+    std::cout << "startPermutation:\n";
+    for (int i : left) { ;
+        std::cout << i << " ";
+    }
+    for (int i : right) { ;
+        std::cout << i << " ";
+    }
+
+    // For the endPerm we have to combine the left and right vector
+    std::vector<int> input2;
+    input2.reserve(left.size() + right.size());
+    input2.insert(input2.end(), left.begin(), left.end());
+    input2.insert(input2.end(), right.begin(), right.end());
+
+    std::vector<int> endPermVector = endPermutation(input2);
+    std::cout << "\nendPermutation:\n";
+    // Output the endPermutated vector
+    for (int i : endPermVector) { ;
+        std::cout << i << " ";
+    }
+    std::cout << "\n";
+}
+
 
 int main() {
     //series1(93, 42);
     //series2();
-    series3();
+    //series3();
+    series4();
 
     return 0;
 }
