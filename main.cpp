@@ -55,46 +55,24 @@ void series3()
 }
 
 void series4()
-{
-	// Fill a vector with the numbers from 1..64
-	std::vector<int> input(64);
+{// Fill a vector with the numbers from 1..64
+	std::vector<int> clearText(64);
 	for(int i = 0; i < 64; i++)
 	{
-		input[i] = i + 1;
+		clearText[i] = i + 1;
 	}
 
-	std::pair<std::vector<int>, std::vector<int>> startPermVector = startPermutation(input);
-	// Extract the left and right vector into their own variables
-	std::vector<int> left = startPermVector.first;
-	std::vector<int> right = startPermVector.second;
-	// Output first the left vector and then the right one
-	std::cout << "startPermutation:\n";
-	for(int i : left)
+	std::vector<int> key(64);
+	for(int i = 0; i < 64; i++)
 	{
-		;
-		std::cout << i << " ";
-	}
-	for(int i : right)
-	{
-		;
-		std::cout << i << " ";
+		key[i] = i + 1;
 	}
 
-	// For the endPerm we have to combine the left and right vector
-	std::vector<int> input2;
-	input2.reserve(left.size() + right.size());
-	input2.insert(input2.end(), left.begin(), left.end());
-	input2.insert(input2.end(), right.begin(), right.end());
-
-	std::vector<int> endPermVector = endPermutation(input2);
-	std::cout << "\nendPermutation:\n";
-	// Output the endPermutated vector
-	for(int i : endPermVector)
+	std::vector<int> encrypted = encryptDES(clearText, key);
+	for(int i = 0; i < 64; i++)
 	{
-		;
-		std::cout << i << " ";
+		std::cout << encrypted[i] << " ";
 	}
-	std::cout << "\n";
 }
 
 

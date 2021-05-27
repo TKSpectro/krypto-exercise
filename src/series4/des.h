@@ -4,16 +4,17 @@
 #include <cstdint>
 #include <vector>
 
-#define ui64 uint64_t
-#define ui32 uint32_t
-#define ui8 uint8_t
-
 std::pair<std::vector<int>, std::vector<int>> startPermutation(std::vector<int> input);
-
 std::vector<int> endPermutation(std::vector<int> input);
 
-ui64 encrypt(ui64 block);
+std::vector<int> expandPermutation(std::vector<int> input);
 
-ui64 decrypt(ui64 block);
+std::vector<int> sBoxPermutation(std::vector<int> input);
+std::vector<int> pBoxPermutation(std::vector<int> input);
 
+std::pair<std::vector<int>, std::vector<int>> keyPermutation(std::vector<int> input);
+std::vector<std::vector<int>> keyRotation(std::pair<std::vector<int>, std::vector<int>> input);
+std::vector<int> keyCompressionPermutation(std::vector<int> input);
+
+std::vector<int> encryptDES(std::vector<int> clearText, std::vector<int> key);
 #endif //SERIES1_CPP_DES_H
