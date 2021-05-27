@@ -1,2 +1,0 @@
-# krypto-exercise
- 
