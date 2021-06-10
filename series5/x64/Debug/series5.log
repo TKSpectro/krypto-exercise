@@ -1,0 +1,3 @@
+﻿  rsa.cpp
+C:\Users\tomka\Documents\GitHub\krypto-exercise\series5\rsa.cpp(36,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  series5.vcxproj -> C:\Users\tomka\Documents\GitHub\krypto-exercise\x64\Debug\series5.exe

@@ -209,7 +209,7 @@ std::vector<int> keyCompressionPermutation(std::vector<int> input)
 std::vector<int> encryptDES(std::vector<int> clearText, std::vector<int> key)
 {
 	bool debug = false;
-	// put the cleartext into the startPermutation function
+	// put the cleartext into the rsaEncode function
 	std::pair<std::vector<int>, std::vector<int>> startPermVector = startPermutation(clearText);
 	// Extract the left and right vector into their own variables
 
