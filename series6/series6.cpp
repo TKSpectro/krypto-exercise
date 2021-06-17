@@ -49,6 +49,8 @@ int CHPHash(int x1, int x2)
 
 int main()
 {
+	std::cout << squareMultiply(8, 27, 55) << std::endl;
+
 	std::cout << CHPHash(5692, 144) << std::endl;
 	std::cout << CHPHash(1220, 54) << std::endl;
 	std::cout << CHPHash(212, 4214) << std::endl;
